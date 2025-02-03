@@ -2,7 +2,7 @@
 import { fullproduct } from '@/app/interface'
 import { client } from '@/app/lib/Sanity'
 import AddtoBag from '@/components/AddtoBag';
-import Addtobag from '@/components/AddtoBag';
+
 import ImageGallery from '@/components/imageGallery'
 import { Button } from '@/components/ui/button';
 import { Star, Truck } from 'lucide-react';
@@ -32,10 +32,10 @@ async function Getdata(slug:string){
   
 }
 
-
+export const  dynamic = "force-dynamic";
  async function Slugpage({params}:{params:{slug:string}}) {
     const data : fullproduct = await  Getdata(params.slug)
-    // const [rating, setRating] = useState(4.2); // Initial rating
+ 
 
   
 

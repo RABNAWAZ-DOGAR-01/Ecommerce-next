@@ -6,6 +6,7 @@ export interface simlifiedproduct {
     categoryName:"string"
     name:"string",
 
+
 };
 
 export interface fullproduct {
@@ -19,3 +20,9 @@ export interface fullproduct {
     description:"string",
     price_id:"string"
 }
+
+interface PageProps {
+    params: {
+      category: string;
+    };
+  }

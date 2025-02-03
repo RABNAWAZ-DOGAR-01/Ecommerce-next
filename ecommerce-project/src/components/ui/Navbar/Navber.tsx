@@ -27,27 +27,27 @@
 //         </h1>
 //       </Link>
 
-//       <nav className="hidden gap-12 lg:flex 2xl:ml-16">
-//         {links.map((link, idx) => (
-//           <div key={idx}>
-//             {pathname === link.href ? (
-//               <Link
-//                 className="text-lg text-blue-500 font-semibold"
-//                 href={link.href}
-//               >
-//                 {link.name}
-//               </Link>
-//             ) : (
-//               <Link
-//                 href={link.href}
-//                 className="text-lg font-semibold text-gray-600 transition duration-300 hover:text-primary"
-//               >
-//                 {link.name}
-//               </Link>
-//             )}
-//           </div>
-//         ))}
-//       </nav>
+      // <nav className="hidden gap-12 lg:flex 2xl:ml-16">
+      //   {links.map((link, idx) => (
+      //     <div key={idx}>
+      //       {pathname === link.href ? (
+      //         <Link
+      //           className="text-lg text-blue-500 font-semibold"
+      //           href={link.href}
+      //         >
+      //           {link.name}
+      //         </Link>
+      //       ) : (
+      //         <Link
+      //           href={link.href}
+      //           className="text-lg font-semibold text-gray-600 transition duration-300 hover:text-primary"
+      //         >
+      //           {link.name}
+      //         </Link>
+      //       )}
+      //     </div>
+      //   ))}
+      // </nav>
 
 //       <div className="flex gap-4 items-center">
 //         {/* Shopping Cart Button with Badge */}
@@ -117,7 +117,7 @@ export default function Navbar() {
       </Link>
 
       {/* Desktop Navigation (Hidden on Small Screens) */}
-      <nav className="hidden lg:flex gap-12">
+      {/* <nav className="hidden lg:flex gap-12">
         {links.map((link, idx) => (
           <Link
             key={idx}
@@ -128,6 +128,27 @@ export default function Navbar() {
           >
             {link.name}
           </Link>
+        ))}
+      </nav> */}
+       <nav className="hidden gap-12 lg:flex 2xl:ml-16">
+        {links.map((link, idx) => (
+          <div key={idx}>
+            {pathname === link.href ? (
+              <Link
+                className="text-lg text-blue-500 font-semibold"
+                href={link.href}
+              >
+                {link.name}
+              </Link>
+            ) : (
+              <Link
+                href={link.href}
+                className="text-lg font-semibold text-gray-600 transition duration-300 hover:text-primary"
+              >
+                {link.name}
+              </Link>
+            )}
+          </div>
         ))}
       </nav>
 

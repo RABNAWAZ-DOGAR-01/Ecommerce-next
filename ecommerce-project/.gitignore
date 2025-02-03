@@ -23,7 +23,6 @@
 # misc
 .DS_Store
 *.pem
-.env.local
 .env
 
 # debug
@@ -36,7 +35,7 @@ yarn-error.log*
 .env*
 
 # vercel
-.vercel
+sanity/.next
 
 # typescript
 *.tsbuildinfo

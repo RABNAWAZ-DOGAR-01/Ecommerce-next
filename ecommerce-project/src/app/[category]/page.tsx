@@ -3,9 +3,9 @@ import { client } from '../lib/Sanity'
 import { simlifiedproduct } from '../interface';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight } from 'lucide-react';
 import { urlFor } from '@/sanity/lib/image';
-import category from '@/sanity/schemaTypes/category';
+
+
 async function GetData(category:string) {
     const query = ` *[_type == "product" && category->name == "${category}"]{
    _id,
@@ -20,14 +20,14 @@ async function GetData(category:string) {
 return data ;
 }
 
+export const  dynamic = "force-dynamic";
 
 
-
-const Category = async ({params}:{params:{category:string}}) => {
+const Category = async ({ params }: { params: { category:string } }) => {
 
     const data:simlifiedproduct[] = await GetData(params.category)
 
-// Define an array of restricted routes
+
 
   return (
     <div className="-bg-gray-900 w-full -bg-yellow-300 flex items-center lg:justify-center">
