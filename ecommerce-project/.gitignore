@@ -23,6 +23,10 @@
 # misc
 .DS_Store
 *.pem
+<<<<<<< HEAD
+=======
+
+>>>>>>> 82de3b4678bf342ffdbc7c855422adde2f15a638
 .env
 
 # debug
