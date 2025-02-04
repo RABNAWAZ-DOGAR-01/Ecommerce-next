@@ -141,14 +141,14 @@ export function ShoppingCart() {
                 <div className="mt-6">
                   {!isSignedIn ? (
                     <SignInButton mode="redirect">
-                      <button className="bg-slate-700 hover:bg-slate-900 text-white py-4 mt-8 sm:mt-4 px-[117px] sm:px-[48px]">
+                      <button className="bg-slate-700 hover:bg-slate-900 text-white py-4 mt-8 sm:mt-4  xxs:px-5">
                         Sign in to Checkout
                       </button>
                     </SignInButton>
                   ) : (
                <button
                       onClick={handleCheckout}
-                      className="bg-green-600 hover:bg-green-800 text-white py-4 mt-8 sm:mt-4 px-[117px] sm:px-[48px]"
+                      className="bg-green-600 hover:bg-green-800 text-white py-4 mt-8 sm:mt-4 px-5"
                     >
                Proceed to Payment
                     </button>

@@ -157,7 +157,7 @@ export default function Navbar() {
         {/* Shopping Cart Button */}
         <div className="relative">
           <Button
-            className="flex flex-col gap-y-1.5 h-12 w-12 sm:w-20 sm:h-18 md:w-24 md:h-20"
+            className="flex flex-col gap-y-1.5 h-12 w-12 sm:w-20 sm:h-18 md:w-24 md:h-20 "
             variant={"outline"}
             onClick={() => handleCartClick()}
           >
@@ -174,7 +174,7 @@ export default function Navbar() {
         {/* User Login/Signout Section */}
         <SignedOut>
           <SignInButton>
-            <Button className="px-8 py-5 bg-[#3b82f6]">Login</Button>
+            <Button className="px-5 py-5 bg-[#3b82f6]">Login</Button>
           </SignInButton>
         </SignedOut>
 
