@@ -33,8 +33,8 @@ async function Getdata(slug:string){
 }
 
 export const  dynamic = "force-dynamic";
- async function Slugpage({params}:{params:{slug:string}}) {
-    const data : fullproduct = await  Getdata(params.slug)
+ async function Slugpage({params}:{params:Promise<{slug:string}>}) {
+    const data : fullproduct = await  Getdata((await params).slug)
  
 
   

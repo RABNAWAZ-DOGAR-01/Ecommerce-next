@@ -1,4 +1,4 @@
-import Cancel from "@/app/Cancel/page";
+import Cancel from "@/app/cancel/page";
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
 
@@ -32,7 +32,8 @@ export async function POST(req: Request) {
             line_items,
             mode: "payment",
             success_url: `${req.headers.get("origin")}/Success`,  // Custom success page
-            cancel_url: `${req.headers.get("origin")}/Cancel?returnUrl=${encodeURIComponent(returnUrl)}`, // Custom cancel page with returnUrl
+            cancel_url: `${req.headers.get("origin")}/cancel`, // Ensure returnUrl is always defined
+            // cancel_url: `${req.headers.get("origin")}/Cancel?returnUrl=${encodeURIComponent(returnUrl)}`, // Custom cancel page with returnUrl
         });
         
 

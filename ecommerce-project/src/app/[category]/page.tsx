@@ -20,12 +20,12 @@ async function GetData(category:string) {
 return data ;
 }
 
-export const  dynamic = "force-dynamic";
 
 
-const Category = async ({ params }: { params: { category:string } }) => {
 
-    const data:simlifiedproduct[] = await GetData(params.category)
+const Category = async ({ params }: { params:Promise<{ category:string }> }) => {
+
+    const data:simlifiedproduct[] = await GetData((await params).category)
 
 
 
@@ -34,7 +34,7 @@ const Category = async ({ params }: { params: { category:string } }) => {
     <div className="max-auto -max-w-2xl  px-4 py-16 sm:px-6 lg:max-w-7xl lg:px-8 -bg-red-400 ">
     <div className="flex -justify-between gap-5 items-center -bg-slate-400 mb-5  -bg-red-300">
     <h2 className="text-4xl font-bold tracking-tight text-gray-900">
-      Our products For {params.category} 
+      Our products For {(await params).category} 
       </h2>
       <div>
       <Link href={'/'} className='bold font-[700] lg:hidden' >/Home</Link>
@@ -44,7 +44,7 @@ const Category = async ({ params }: { params: { category:string } }) => {
     
     {/* Create a new Div */}
     {/* First Section */}
-    <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid sm:grid-cols-3 lg:grid-cols-4 xl:gap-x-8 -bg-slate-300 w-full content-between mdr:grid-cols-2 xxs:w-[300px] mdr:w-full   sm:content-evenly  ">
+    <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid sm:grid-cols-3 lg:grid-cols-4 xl:gap-x-8 -bg-slate-300 w-full content-between mdr:grid-cols-2 xxs:w-[300px] mdr:w-full   sm:content-evenly  " >
     {data.map((product)=>(
     <div key={product._id} className="group relative ">
     <div className="aspect-square w-full overflow-hidden rounded-md  bg-gray-200 group-hover:opacity-75 lg:h-80">
