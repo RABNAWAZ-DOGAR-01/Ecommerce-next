@@ -3,12 +3,8 @@
 # dependencies
 /node_modules
 /.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
+.pnp.js
+.yarn/install-state.gz
 
 # testing
 /coverage
@@ -18,28 +14,22 @@
 /out/
 
 # production
-
+/build
 
 # misc
 .DS_Store
 *.pem
-<<<<<<< HEAD
-=======
-
->>>>>>> 82de3b4678bf342ffdbc7c855422adde2f15a638
-.env
 
 # debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# local env files
+.env*.local
 
 # vercel
-
+.vercel
 
 # typescript
 *.tsbuildinfo
