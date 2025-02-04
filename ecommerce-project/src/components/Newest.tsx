@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
 
+
 async function getData(){
 const query = `*[_type == "product"][0...13] | order(createdAt desc){
   id_,
@@ -28,8 +29,8 @@ export default async function Newest() {
             <div className="max-auto -max-w-2xl px-4 py-16 sm:px-6 lg:max-w-7xl lg:px-8 xxs:w-full  -bg-red-400 ">
                 <div className="sm:flex justify-between items-center w-full -bg-slate-400 mb-5 -bg-red-300">
                     <h2 className="text-4xl font-bold tracking-tight text-gray-900">Our Newest products</h2>
-                    <Link href="/all" className="text-purple-500 text-[20px] flex items-center gap-x-1 ">
-                        See All{""}
+                    <Link href={'/'} className="text-purple-500 text-[20px] flex items-center gap-x-1 ">
+                        See All
                         <span>
                             <ArrowRight />
                         </span>

@@ -10,7 +10,7 @@ import { useShoppingCart } from "use-shopping-cart";
 import { Bounce, toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useAuth, SignInButton } from "@clerk/nextjs";
-import Link from "next/link";
+
 
 export function ShoppingCart() {
   const {

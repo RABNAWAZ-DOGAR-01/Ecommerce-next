@@ -70,4 +70,3 @@ src={urlFor(data.image2).url()} alt=''
 }
 
 export default Hero
-
