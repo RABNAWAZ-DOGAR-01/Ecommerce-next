@@ -1,5 +1,5 @@
 
-import { NextResponse } from "next/server";
+mport { NextResponse } from "next/server";
 import Stripe from "stripe";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string, {
@@ -42,7 +42,7 @@ export async function POST(req: Request) {
     } catch (error: any) {
         return NextResponse.json({ error: error.message }, { status: 500 });
     }
-}
+};
 
 export async function GET() {
     return NextResponse.json(
@@ -51,5 +51,6 @@ export async function GET() {
     );
 
 }
+
 
 
